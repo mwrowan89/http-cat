@@ -30,9 +30,10 @@ img {
   list-style: none;
   display: flex;
   max-width: 100vw;
+  overflow: hidden;
   justify-content: center;
   align-items: center;
-  transform: scale(1.7);
+  font-size: 25px;
 }
 .num-btn {
   display: flex;
