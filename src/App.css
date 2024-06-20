@@ -20,14 +20,10 @@ img {
   margin-left: 24px;
 }
 .list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 95vw;
   gap: 5px;
-  flex-wrap: wrap;
-  text-decoration: none;
   list-style: none;
+  position: static;
 }
 .button-list {
   list-style: none;

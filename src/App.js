@@ -113,15 +113,19 @@ const App = function () {
     }
     if (index === 1) {
       setTwo(true);
+      handleShuffle();
     }
     if (index === 2) {
       setThree(true);
+      handleShuffle();
     }
     if (index === 3) {
       setFour(true);
+      handleShuffle();
     }
     if (index === 4) {
       setFive(true);
+      handleShuffle();
     }
   };
 
@@ -144,7 +148,7 @@ const App = function () {
   return (
     <div className="App">
       <h1 className="title">HTTP Cat</h1>
-      <ul className="button-list">
+      <div className="button-list">
         {statusGroups.map((num, index) => (
           <li
             className="num-btn"
@@ -154,7 +158,7 @@ const App = function () {
             {num.code}
           </li>
         ))}
-      </ul>
+      </div>
 
       {one && (
         <ul className="list">
