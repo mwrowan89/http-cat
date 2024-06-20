@@ -172,7 +172,7 @@ const App = function () {
             {num.code}
           </div>
         ))}
-        {one && two && three && four && five && (
+        {(one || two || three || four || five) && (
           <button onClick={hideImages}>X</button>
         )}
       </div>
