@@ -20,10 +20,11 @@ img {
 }
 .list {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   max-width: 95vw;
   list-style: none;
+  gap: 2px;
 }
 .button-list {
   list-style: none;

@@ -145,6 +145,18 @@ const App = function () {
     setStatusCodes(shuffleArray(statusCodes));
   };
 
+  const hideImages = () => {
+    setOne(false);
+
+    setTwo(false);
+
+    setThree(false);
+
+    setFour(false);
+
+    setFive(false);
+  };
+
   return (
     <div className="App">
       <h1 className="title">HTTP Cat</h1>
@@ -153,11 +165,16 @@ const App = function () {
           <div
             className="num-btn"
             key={index}
-            onClick={(e) => filterImages(index)}
+            onClick={(e) => {
+              filterImages(index);
+            }}
           >
             {num.code}
           </div>
         ))}
+        {one && two && three && four && five && (
+          <button onClick={hideImages}>X</button>
+        )}
       </div>
 
       {one && (
