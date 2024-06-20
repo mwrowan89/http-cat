@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 
 const App = function () {
@@ -26,7 +26,7 @@ const App = function () {
     },
   ];
 
-  const statusCodes = [
+  const initialStatusCodes = [
     { code: 100, name: "Continue" },
     { code: 101, name: "Switching Protocols" },
     { code: 102, name: "Processing" },
@@ -104,21 +104,24 @@ const App = function () {
     { code: 599, name: "Network Connect Timeout Error" },
   ];
 
+  const [statusCodes, setStatusCodes] = useState(initialStatusCodes);
+
   const filterImages = (index) => {
     if (index === 0) {
-      setOne(!one);
+      setOne(true);
+      handleShuffle();
     }
     if (index === 1) {
-      setTwo(!two);
+      setTwo(true);
     }
     if (index === 2) {
-      setThree(!three);
+      setThree(true);
     }
     if (index === 3) {
-      setFour(!four);
+      setFour(true);
     }
     if (index === 4) {
-      setFive(!five);
+      setFive(true);
     }
   };
 
@@ -132,6 +135,10 @@ const App = function () {
       ];
     }
     return shuffledArray;
+  };
+
+  const handleShuffle = () => {
+    setStatusCodes(shuffleArray(statusCodes));
   };
 
   return (
