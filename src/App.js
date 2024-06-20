@@ -123,7 +123,7 @@ const App = function () {
   };
 
   return (
-    <div className="main">
+    <div className="App">
       <h1 className="title">HTTP Cat</h1>
       <ul className="button-list">
         {statusGroups.map((num, index) => (
