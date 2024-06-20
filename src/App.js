@@ -150,13 +150,13 @@ const App = function () {
       <h1 className="title">HTTP Cat</h1>
       <div className="button-list">
         {statusGroups.map((num, index) => (
-          <li
+          <div
             className="num-btn"
             key={index}
             onClick={(e) => filterImages(index)}
           >
             {num.code}
-          </li>
+          </div>
         ))}
       </div>
 
